@@ -19,7 +19,6 @@ import javax.ws.rs.core.Response;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import kafka.KafkaSender;
-import models.FastaObject;
 
 
 @Path("fasta/")

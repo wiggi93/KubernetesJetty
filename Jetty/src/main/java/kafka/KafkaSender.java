@@ -9,7 +9,6 @@ import org.apache.kafka.common.serialization.StringSerializer;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import models.FastaObject;
 
 public class KafkaSender {
 	static int i=0;
@@ -17,8 +16,8 @@ public class KafkaSender {
 //	public final static String KAFKA_URL = System.getenv("KAFKA_URL");
 //	public final static String KAFKA_TOPIC = System.getenv("KAFKA_TOPIC");
 
-	public final static String KAFKA_URL = "localhost:9093";
-	public final static String KAFKA_TOPIC = "test";	
+	public final static String KAFKA_URL = "192.168.0.21:9092";
+	public final static String KAFKA_TOPIC = "fasta";	
 	
 	 /**
      * This method creates a Kafka Producer
@@ -38,7 +37,6 @@ public class KafkaSender {
 			ProducerRecord<String, String> record = new ProducerRecord<String, String>(KAFKA_TOPIC,fasta);
 			producer.send(record);
 			producer.close();
-			
 			
 			System.out.println(fasta);
 			
