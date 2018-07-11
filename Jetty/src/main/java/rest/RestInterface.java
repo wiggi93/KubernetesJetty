@@ -24,6 +24,7 @@ import kafka.KafkaSender;
 @Path("fasta/")
 public class RestInterface {
 	
+	
 	StringBuffer response = new StringBuffer();		
 	 
 	/**

@@ -27,6 +27,8 @@ public class KafkaSender {
      */			
 	public static void sendToKafka(String fasta) {
 			
+			System.out.println("test");
+		
 			Properties props = new Properties();
 			props.put("bootstrap.servers", KAFKA_URL);
 			props.put("key.serializer", StringSerializer.class.getName());
